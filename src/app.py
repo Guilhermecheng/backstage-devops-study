@@ -22,7 +22,12 @@ def health():
 	# Do an actual check here
     return jsonify({'status': 'up'}), 200
 
+@app.route('/api/v1/details')
+
+def details():
+    return jsonify({ 'message': 'Hello world' }), 200
+
 if __name__ == '__main__':
 
-    app.run(host="0.0.0.0")
+    app.run(host=("0.0.0.0"))
 
